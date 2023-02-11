@@ -9,5 +9,6 @@ O ASP.NET Core dá suporte a injeção de dependência de forma nativa.
 ## SOLID  
 
 SRP - Principio da responsabilidade única. (O mais simples e mais importante sem ele não é possível aplicar os demais).  
-OCP - Princípio do aberto e fechado.  
+OCP - Princípio do aberto e fechado.  (Classes fechadas e abertas para extensão, evita quebrar o que já está funcionando)
+
 
