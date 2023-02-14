@@ -1,4 +1,4 @@
-# fundamentos-dot-net
+# Fundamentos-dot-net
 Fundamentos de .NET na prática.
 
 ## Injeção de depêndencia
@@ -23,5 +23,16 @@ ISP - Princípio de segregação de interfaces.  (Muitas interfaces especificas 
 DIP - Princípio da injeção de dependência (Depender da abstração e não da implementação).
 "Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações; 
 Abstrações não devem depender de detalhes. Detalhes devem depender de abstrações."
+
+### DI - Ciclos de de vida
+
+- Transiente:
+  Obtém uma nova instância do objeto a cada solicitação
+
+- Scoped:
+  Reutiliza a mesma instância do objeto durante todo o request (Utilizado para padrões web)
+
+- Singleton:
+  Utiliza a mesma instância para toda a aplicação (cuidado)
 
 
