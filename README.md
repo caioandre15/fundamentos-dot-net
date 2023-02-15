@@ -93,7 +93,37 @@ public class Entity
 #### Inserindo Models na classe de contexto  
 
 > public DbSet<Car> Cars { get; set; }
+  
+#### Inserindo o contexto na controller, por injeção de dependência.  
+````
+private readonly DataBaseContext _contexto;  
 
+public CarsController(DataBaseContext contexto)
+{
+	_contexto = contexto
+}
+````
+Adicionar  
+````
+_contexto.Cars.Add(car);  
+_contexto.SaveChanges();  
+````
+Buscar  
+````
+_context.Cars.Find(car.Id);  
+_context.Cars.FirstOrDefault(a => a.Plate == "BKT-1588");  
+_context.Cars.Where(a => a.Name == "Corsa");    
+````  
+Atualizar  
+````
+_context.Cars.Update(car);  
+_contexto.SaveChanges();  
+````
+Deletar  
+````
+_context.Cars.Remove(car);  
+_context.SaveChanges();  
+````
 Migrations - Para criar e alterar os banco de dados.
 
 
