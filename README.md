@@ -51,12 +51,12 @@ Criar uma classe que extenda a a classe DbContext. Que será a classe principal 
 Adicionar este serviço na classe Program passando a connection string.  
 Adicionar a connecion string no arquivo appsettings.  
 
-``
+````
 builder.Services.AddDbContext<DataBaseContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-``
+````
 
 Migrations - Para criar e alterar os banco de dados.
 
