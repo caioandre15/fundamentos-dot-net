@@ -34,5 +34,21 @@ Abstrações não devem depender de detalhes. Detalhes devem depender de abstra�
 
 - Singleton:
   Utiliza a mesma instância para toda a aplicação (cuidado)
+  
+## Entity Framework (EF)
+
+O que é?
+O meio para realizar acesso ao banco de dados em .NET.
+ORM - Object Relational Mapper (Mapeia o objeto (Classe) para o mundo relacional).
+
+Como instalar?
+Package Manager Console
+> install-package Microsoft.EntityFrameworkCore
+
+Como configurar o contexto?
+Criar uma classe que extenda a a classe DbContext. Que será a classe principal para realizar o mapeamento.
+Adicionar este serviço na classe Program passando a connection string.
+
+Migrations - Para criar e alterar os banco de dados.
 
 
