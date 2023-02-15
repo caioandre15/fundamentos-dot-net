@@ -126,4 +126,13 @@ _context.SaveChanges();
 ````
 Migrations - Para criar e alterar os banco de dados.
 
+A ideia do migration é verificar se o que está no DbContex está no banco de dados, caso não esteja é criado um script para realizar está sincronização.
+Comando:  
+````
+add-migration "Nome da Migration" 
+````
+Atributos que podem ser utilizados no comando:  
+-Context (Passar o nome do contexto caso tenha mais de um)  
+-Verbose (Para ter mais detalhes de logs do que está ocorrendo)  
+
 
