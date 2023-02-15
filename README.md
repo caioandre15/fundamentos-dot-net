@@ -75,6 +75,20 @@ Appsettings
   }
 ````
 
+## Criando Models
+
+Criar a Classe Entity e herda-las nas classes que serão criadas como model. Desta forma o Id sempre será um Guid, não sendo necessário adicionar o Id em cada classe.
+
+````
+public class Entity
+    {
+        protected Entity()
+        {
+            Id = Guid.NewGuid();
+        }
+        public Guid Id { get; set; }
+    }
+````
 
 
 Migrations - Para criar e alterar os banco de dados.
