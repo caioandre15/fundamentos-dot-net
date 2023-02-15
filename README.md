@@ -47,16 +47,35 @@ Package Manager Console
 > install-package Microsoft.EntityFrameworkCore.SQLServer
 
 Como configurar o contexto?
-Criar uma classe que extenda a a classe DbContext. Que será a classe principal para realizar o mapeamento.  
+Criar uma classe que extenda a a classe DbContext, adicionando as options na clase base. Que será a classe principal para realizar o mapeamento.  
 Adicionar este serviço na classe Program passando a connection string.  
 Adicionar a connecion string no arquivo appsettings.  
 
+Classe extende a DbContext:
+
+````
+public DataBaseContext(DbContextOptions options)
+        : base(options)
+        {
+
+        }
+````
+Classe Program
 ````
 builder.Services.AddDbContext<DataBaseContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 ````
+
+Appsettings
+````
+"ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=bd-locator-dev;Trusted_Connection=True;MultipleActiveResultsSets=true"
+  }
+````
+
+
 
 Migrations - Para criar e alterar os banco de dados.
 
