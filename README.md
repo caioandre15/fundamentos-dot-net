@@ -43,7 +43,7 @@ ORM - Object Relational Mapper (Mapeia o objeto (Classe) para o mundo relacional
 
 Como instalar?
 Package Manager Console
-> install-package Microsoft.EntityFrameworkCore
+> install-package Microsoft.EntityFrameworkCore  
 > install-package Microsoft.EntityFrameworkCore.SQLServer
 
 Como configurar o contexto?
