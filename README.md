@@ -142,5 +142,9 @@ Comando para deletar uma Migration:
 ````
 remove-migration
 ````
+Comando para criar o banco e suas tabelas conforme a Migrations:
+````
+update-database -Verbose
+````
 
 
