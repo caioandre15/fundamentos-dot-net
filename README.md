@@ -157,5 +157,10 @@ Adicionar serviço na classe Program:
 ````
 builder.Services.AddAutoMapper(typeof(Program));
 ````
+Criar uma pasta para o AutoMapper e uma classe de configuração (AutoMapperConfig).  
+Esta classe herdará da classe Profile, pois seu objetivo é ser uma classe de perfil de mapeamento.  
+
+
+
 
 
