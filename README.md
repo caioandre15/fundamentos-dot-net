@@ -159,6 +159,16 @@ builder.Services.AddAutoMapper(typeof(Program));
 ````
 Criar uma pasta para o AutoMapper e uma classe de configuração (AutoMapperConfig).  
 Esta classe herdará da classe Profile, pois seu objetivo é ser uma classe de perfil de mapeamento.  
+Dentro da classe criar um construtor com os mapeamentos, conforme exemplo:  
+````
+public class AutoMapperConfig : Profile
+    {
+        public AutoMapperConfig()
+        {
+            CreateMap<Car, CarViewModel>().ReverseMap();
+        }
+    }
+````
 
 
 
