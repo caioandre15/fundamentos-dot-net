@@ -153,4 +153,9 @@ Comando para instalar o AutoMapper
 ````
 install-package automapper.extensions.microsoft.dependencyinjection
 ````
+Adicionar serviço na classe Program:   
+````
+builder.Services.AddAutoMapper(typeof(Program));
+````
+
 
