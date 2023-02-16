@@ -169,6 +169,8 @@ public class AutoMapperConfig : Profile
         }
     }
 ````
+No código o ReverseMap() faz o caminho inverso da conversão sem que haja a necessidade de criar um mapeamento para cada sentido.  
+
 
 
 
