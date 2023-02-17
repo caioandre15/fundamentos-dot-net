@@ -47,7 +47,7 @@ Package Manager Console
 > install-package Microsoft.EntityFrameworkCore.SQLServer
 
 Como configurar o contexto?
-Criar uma classe que extenda a a classe DbContext, adicionando as options na clase base. Que será a classe principal para realizar o mapeamento.  
+Criar uma classe que extenda a a classe DbContext, adicionando as options na classe base. Que será a classe principal para realizar o mapeamento.  
 Adicionar este serviço na classe Program passando a connection string.  
 Adicionar a connecion string no arquivo appsettings.  
 
