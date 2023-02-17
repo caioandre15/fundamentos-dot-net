@@ -146,8 +146,8 @@ Comando para criar o banco e suas tabelas conforme a Migrations:
 ````
 update-database -Verbose
 ````
-#### Criando ViewModels realizando o De/Para com Automapper  
-Criar uma Pasta ViewModels e adicionar classes obtendo os campos que devem ser expostos seguindo as regras de negócio.  
+#### Criando DTOs realizando o De/Para com Automapper  
+Criar uma Pasta Dtos e adicionar classes obtendo os campos que devem ser expostos seguindo as regras de negócio.  
 
 Comando para instalar o AutoMapper  
 ````
