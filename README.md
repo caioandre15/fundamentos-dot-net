@@ -171,7 +171,45 @@ public class AutoMapperConfig : Profile
 ````
 No código o ReverseMap() faz o caminho inverso da conversão sem que haja a necessidade de criar um mapeamento para cada sentido.  
 
-Adicionando Autenticação com JWT [Link do artigo utilizado como guia](https://www.c-sharpcorner.com/article/jwt-authentication-and-authorization-in-net-6-0-with-identity-framework/)
+### Adicionando Autenticação com JWT:  
+Definições:  
+	Autenticaçao - Login senha  
+	Autorizaçao - perfil Roles  
+[Link do artigo utilizado como guia](https://www.c-sharpcorner.com/article/jwt-authentication-and-authorization-in-net-6-0-with-identity-framework/)  
+
+Adicionando dois contextos para separar o contexto do identity e da aplicação:  
+- Criar uma pasta Data;  
+- Criar um contexto que herda da classe IdentityDbContext
+- Adicionar na classe de configuração do identity o serviço passando a conection string;
+- Depois gerar a migration obrigatoriamente passando o contexto novo.
+
+````
+public class ApplicationDbContext : IdentityDbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {}
+    }	
+````
+````
+public static class IdentityConfig
+    {
+        public static IServiceCollection AddIdentityConfiguration(this IServiceCollection services,
+            IConfiguration configuration)
+        {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+            return services;
+        }
+    }
+````
+````
+>>Classs Program
+builder.Services.AddIdentityConfiguration(builder.Configuration);
+````
+Comando no Package Manager Console:
+````
+add-migration Identity -Context ApplicationDbContext
+````
 
 
 
