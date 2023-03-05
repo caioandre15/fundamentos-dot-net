@@ -171,6 +171,17 @@ public class AutoMapperConfig : Profile
 ````
 No código o ReverseMap() faz o caminho inverso da conversão sem que haja a necessidade de criar um mapeamento para cada sentido.  
 
+Adicionando Autenticação com JWT:  
+Libs necessárias:
+Microsoft.EntityFrameworkCore.SqlServer   
+Microsoft.EntityFrameworkCore.Tools  
+Microsoft.AspNetCore.Identity.EntityFrameworkCore  
+Microsoft.AspNetCore.Authentication.JwtBearer  
+
+
+
+
+
 
 
 
