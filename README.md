@@ -210,6 +210,9 @@ Comando no Package Manager Console:
 ````
 add-migration Identity -Context ApplicationDbContext
 ````
+````
+update-migration -Context ApplicationDbContext
+````
 
 
 
